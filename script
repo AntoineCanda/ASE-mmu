@@ -1,0 +1,12 @@
+#!/bin/bash
+make 
+echo "Test de l'addition de matrices avec handler 1 page"
+./mmu_manager 0 0 | tee /dev/stderr | ./oracle
+#echo "Test de la multiplication de matrices avec handler 1 page"
+#./mmu_manager 0 1 | tee /dev/stderr | ./oracle
+echo "Test de l'addition de matrices avec handler complet"
+./mmu_manager 1 0 | tee /dev/stderr | ./oracle
+echo "Test de la multiplication de matrices avec handler complet"
+./mmu_manager 1 1 | tee /dev/stderr | ./oracle
+
+
